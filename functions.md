@@ -35,4 +35,10 @@ msg.payload.user.firstName = name[0];
 msg.payload.user.lastName = name[1] || "";
 return msg;
 ```
+Sleep Timer
+```
+setTimeout(()=>{
+    node.send(msg);
+}, 2000)
+```
 
