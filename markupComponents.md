@@ -83,5 +83,12 @@
  <DateTime componentType="dateOnly" />
 </TimelineMessage>
 ```
+#### function for recent dates
+```
+const milisInDay = 86400000;
+const date = new Date();
+msg.payload.user.tomorrowDate = date.getTime() + milisInDay;
+return msg;
+```
 
 
