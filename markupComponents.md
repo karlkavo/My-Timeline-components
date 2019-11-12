@@ -19,6 +19,17 @@
 
 ![alt text](https://i.ibb.co/xmWwVw8/cardlist.png)
 
+### Button Prompt
+```
+<TimelineMessage>
+  <ButtonPromptContainer interactionType="event" preventRetries="true">
+    <ButtonPrompt label="Yes" id="0"/>
+    <ButtonPrompt label="No" id="1"/>
+  </ButtonPromptContainer>
+</TimelineMessage>
+```
+
+
 ### Suggestion Prompt
 ```
 <TimelineMessage minimumDisplayTime='3'>
