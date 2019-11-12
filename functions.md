@@ -1,6 +1,7 @@
 
+## Useful Functions
 
-## Phone Number validator
+Phone Number validator
 ```
 msg.payload.user.customerPhone = msg.payload.user.message.split(' ').map(w => w.slice(0,1).toUpperCase()+ w.slice(1)).join(' ')
 function validatecustomerPhone(CP) {
@@ -16,7 +17,7 @@ if(isValid) {
 return msg;
 ```
 
-##
+
 Random Number
 ```
     const min=0; 
@@ -27,7 +28,7 @@ Random Number
     msg.payload.random = random;
 return msg;
 ```
-## Save Name
+Save Name
 ```
 const name = msg.payload.user.message.split(/ (.+)/);
 msg.payload.user.firstName = name[0];
