@@ -1,7 +1,4 @@
 # Different components
-- test
-- test2
-- test3
 
 
 ### Option Card as Menu
@@ -21,6 +18,18 @@
 
 
 ![alt text](https://i.ibb.co/xmWwVw8/cardlist.png)
+
+### Button Prompt
+```
+<TimelineMessage>
+  <ButtonPromptContainer interactionType="event" preventRetries="true">
+    <ButtonPrompt label="Yes" id="0"/>
+    <ButtonPrompt label="No" id="1"/>
+  </ButtonPromptContainer>
+</TimelineMessage>
+```
+![alt text](https://i.ibb.co/MVP5W5P/Screenshot-2019-11-12-at-14-09-29.png)
+
 
 ### Suggestion Prompt
 ```
@@ -73,6 +82,13 @@
 <TimelineMessage>
  <DateTime componentType="dateOnly" />
 </TimelineMessage>
+```
+#### function for recent dates
+```
+const milisInDay = 86400000;
+const date = new Date();
+msg.payload.user.tomorrowDate = date.getTime() + milisInDay;
+return msg;
 ```
 
 
