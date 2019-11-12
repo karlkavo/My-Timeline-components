@@ -15,3 +15,16 @@ if(isValid) {
 }
 return msg;
 ```
+
+##
+Random Number
+```
+    const min=0; 
+    const max=3; 
+    
+    const random =Math.floor(Math.random() * (max - min)) + min;
+    
+    msg.payload.random = random;
+return msg;
+```
+
