@@ -68,4 +68,11 @@
     <TextMsg>EFT [Form](https://tapuat.allmerica.com/wps/wcm/myconnect/791744004305d8b3b09bf6d0260804a8/112-2141A.pdf?MOD=AJPERES)</TextMsg>
 </TimelineMessage>
 ```
+### Date and Time Picker
+```
+<TimelineMessage>
+ <DateTime componentType="dateOnly" />
+</TimelineMessage>
+```
+
 
