@@ -90,5 +90,36 @@ const date = new Date();
 msg.payload.user.tomorrowDate = date.getTime() + milisInDay;
 return msg;
 ```
+## Broadcast Warning
+```
+<TimelineMessage>
+ <BroadcastMsg interactionType="event"
+   title="Warning"
+   body="Will Liverpool win the Premier League in 2020?"
+   style="warning">
+     <Option title="YES" id="1" />
+     <Option title="No" id="2" />
+  </BroadcastMsg>
+</TimelineMessage>
+```
+![alt text](https://i.ibb.co/KjKphwn/Screenshot-2019-11-12-at-15-14-42.png)
+
+## Baas Carousel output
+```
+<TimelineMessage>
+    <List 
+        title="" 
+        horizontal="true" 
+        style="large-icon">
+        #foreach( $item in $data )
+           <Item 
+               title="$item.first_name  $item.last_name"
+               subtitle="$item.email"
+               id="$velocityCount"
+               imageUrl="$item.avatar"/>
+        #end
+    </List>
+</TimelineMessage>
+```
 
 
