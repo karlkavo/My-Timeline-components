@@ -90,6 +90,18 @@ const date = new Date();
 msg.payload.user.tomorrowDate = date.getTime() + milisInDay;
 return msg;
 ```
+## Broadcast Error
+```
+  <TimelineMessage>
+    <BroadcastMsg
+        style="error"
+        title="Something's gone wrong!"
+        body="Please provide a first name. Please provide a valid email address. Error uploading image. Please try again."
+        displayTime="5"
+      />
+  </TimelineMessage>
+  ```
+  
 ## Broadcast Warning
 ```
 <TimelineMessage>
