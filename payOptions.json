@@ -1,0 +1,35 @@
+[
+	{
+		"id": "1174294a.9c1067",
+		"type": "detailView",
+		"z": "ccdb6cd3.cce8e",
+		"name": "",
+		"taskUrl": "https://form.jotformeu.com/91123767403353",
+		"taskText": "Pay by Card",
+		"x": 370,
+		"y": 340,
+		"wires": [ [ "ff445ca8.168ab" ] ]
+	},
+	{
+		"id": "ff445ca8.168ab",
+		"type": "detailView",
+		"z": "ccdb6cd3.cce8e",
+		"name": "",
+		"taskUrl": "https://form.jotformeu.com/91123767403353",
+		"taskText": "ApplePay",
+		"x": 370,
+		"y": 380,
+		"wires": [ [ "c1adbb3f.da4cd8" ] ]
+	},
+	{
+		"id": "c1adbb3f.da4cd8",
+		"type": "detailView",
+		"z": "ccdb6cd3.cce8e",
+		"name": "",
+		"taskUrl": "https://form.jotformeu.com/91123767403353",
+		"taskText": "Paypal",
+		"x": 370,
+		"y": 420,
+		"wires": [ [ "3b171db3.d43102" ] ]
+	}
+]
