@@ -1,10 +1,10 @@
 # Different components
 
-
 ### Option Card as Menu
+
 ```
 <TimelineMessage>
-  <OptionCard  subtitle="PLEASE CHOOSE ONE OF THE OPTIONS BELOW " 
+  <OptionCard  subtitle="PLEASE CHOOSE ONE OF THE OPTIONS BELOW "
    preventRetries="true">
     <Option title="OPTION 1" id="1" />
     <Option title="OPTION 2" id="2" />
@@ -16,10 +16,10 @@
 </TimelineMessage>
 ```
 
-
 ![alt text](https://i.ibb.co/xmWwVw8/cardlist.png)
 
 ### Button Prompt
+
 ```
 <TimelineMessage>
   <ButtonPromptContainer interactionType="event" preventRetries="true">
@@ -28,10 +28,11 @@
   </ButtonPromptContainer>
 </TimelineMessage>
 ```
+
 ![alt text](https://i.ibb.co/MVP5W5P/Screenshot-2019-11-12-at-14-09-29.png)
 
-
 ### Suggestion Prompt
+
 ```
 <TimelineMessage minimumDisplayTime='3'>
   <SuggestionPrompt>
@@ -41,7 +42,9 @@
   </SuggestionPrompt>
 </TimelineMessage>
 ```
+
 ### Selectable list
+
 ```
 <TimelineMessage>
 <List title='Try one of the below' selectable='true' preventRetries='true'>
@@ -54,43 +57,50 @@
 </TimelineMessage>
 ```
 
-
 ```
 <TimelineMessage minimumDisplayTime='3'>
   <TextMsg>Hey there! 👋. I'm your Hanover Insurance Bot! I can help you with your insurance queries.</TextMsg>
   <TextMsg>What can I do for you?</TextMsg>>
 </TimelineMessage>
 ```
+
 ```
  <TimelineMessage minimumDisplayTime='2'>
  <TextMsg>
- Customers can also mail in a payment to:   
- The Hanover Insurance Company   
- PO Box 580045  
- Charlotte, NC 28258-0045   
- </TextMsg> 
+ Customers can also mail in a payment to:
+ The Hanover Insurance Company
+ PO Box 580045
+ Charlotte, NC 28258-0045
+ </TextMsg>
  </TimelineMessage>
 ```
+
 ```
  <TimelineMessage>
     <TextMsg> Please fill out and sign the EFT Authorization Form and email it to hanovereft@hanover.com or fax to 508-926-5438</TextMsg>
     <TextMsg>EFT [Form](https://tapuat.allmerica.com/wps/wcm/myconnect/791744004305d8b3b09bf6d0260804a8/112-2141A.pdf?MOD=AJPERES)</TextMsg>
 </TimelineMessage>
 ```
+
 ### Date and Time Picker
+
 ```
 <TimelineMessage>
  <DateTime componentType="dateOnly" />
 </TimelineMessage>
 ```
+
 #### function for recent dates
+
 ```
 const milisInDay = 86400000;
 const date = new Date();
 msg.payload.user.tomorrowDate = date.getTime() + milisInDay;
 return msg;
 ```
+
 ## Broadcast Error
+
 ```
   <TimelineMessage>
     <BroadcastMsg
@@ -100,9 +110,10 @@ return msg;
         displayTime="5"
       />
   </TimelineMessage>
-  ```
-  
+```
+
 ## Broadcast Warning
+
 ```
 <TimelineMessage>
  <BroadcastMsg interactionType="event"
@@ -114,17 +125,19 @@ return msg;
   </BroadcastMsg>
 </TimelineMessage>
 ```
+
 ![alt text](https://i.ibb.co/KjKphwn/Screenshot-2019-11-12-at-15-14-42.png)
 
 ## Baas Carousel output
+
 ```
 <TimelineMessage>
-    <List 
-        title="" 
-        horizontal="true" 
+    <List
+        title=""
+        horizontal="true"
         style="large-icon">
         #foreach( $item in $data )
-           <Item 
+           <Item
                title="$item.first_name  $item.last_name"
                subtitle="$item.email"
                id="$velocityCount"
@@ -134,4 +147,12 @@ return msg;
 </TimelineMessage>
 ```
 
+## Link in message
 
+```
+<TimelineMessage  minimumDisplayTime='3'>
+    <TextMsg>Your current payment method is **${DescriptionOfPlan}**.
+    Please click **[here](https://www.hanover.com/billing/state-specific-plans.html)** for more information.</TextMsg>
+
+</TimelineMessage
+```
