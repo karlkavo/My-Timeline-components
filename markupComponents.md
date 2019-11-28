@@ -156,3 +156,18 @@ return msg;
 
 </TimelineMessage
 ```
+
+## Video in a Card Element
+
+```
+<TimelineMessage>
+    <Card 
+        title="Refrigerator: Measure Twice, Deliver Once" 
+        imgUrl="https://bb-dump-image-eu.s3-eu-west-1.amazonaws.com/Screenshot+2019-11-28+at+10.34.39.png" 
+        selectable="true" 
+        url="http://ecdn.liveclicker.net/8079A8/origin/videos/1937/1906068079_1_liveclicker.mp4"
+        linkOpenTarget="detail"
+        />
+</TimelineMessage>
+```
+
