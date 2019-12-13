@@ -143,3 +143,24 @@ if (birthDates.day.toString() === msg.payload.user.birthDay && birthDates.month.
 }
 return [null, msg];
 ```
+
+Post code mapper
+
+```
+// intentionally lowercased to ease handling by voice
+const postCodesMap = {
+  "8266165":	"t2n1m5",
+  "8276997":	"t2p6x7",
+  "822234":	    "t2a2d4",
+  "8594444":	"t5w4h4",
+  "87555972":	"t7l9p2",
+  "882181":	    "t8a1t1",
+  "89555494":	"t9l4w4",
+  "81223882":	"t1b3u3",
+  "8533433":	"t5e4d3",
+  "828122":	    "t2t1a2",
+  "8822215553":	"t8c1l3"
+}
+msg.postCodesMap = postCodesMap;
+return msg;
+```
