@@ -116,3 +116,30 @@ const convertingFunction = function(phoneVoice) {
 msg.payload.user.phoneNumber = convertingFunction(msg.payload.user.message);
 return msg;
 ```
+Birth Date Check
+
+```
+function convertTimestamp(timestamp) {
+    if (!timestamp) {
+        return {}
+    }
+
+    let re = /\d+/
+    let parsed = timestamp.match(re);
+    let unix_timestamp = parseInt(parsed[0])
+
+    let date = new Date(unix_timestamp)
+    let day = date.getUTCDate()
+    let month = date.getUTCMonth() + 1
+
+    return {
+        "day": day,
+        "month": month
+    }
+}
+const birthDates = convertTimestamp(msg.payload.user.person.BIRTHDATE);
+if (birthDates.day.toString() === msg.payload.user.birthDay && birthDates.month.toString() === msg.payload.user.birthMonth) {
+    return [msg, null];
+}
+return [null, msg];
+```
