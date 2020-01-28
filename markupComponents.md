@@ -171,3 +171,19 @@ return msg;
 </TimelineMessage>
 ```
 
+## Feedback rating
+
+
+
+```
+<TimelineMessage>
+  <List title="How would you rate this service?" selectable="true" preventRetries="true" interactionType="event">
+     <Item title="😊 Excellent " id="1"/>
+     <Item title="😀 Very Good " id="2"/>
+     <Item title="🤨 Fair" id="3"/>
+     <Item title="😞 Poor" id="4"/>
+  </List>
+</TimelineMessage>
+```
+
+
