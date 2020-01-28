@@ -173,7 +173,7 @@ return msg;
 
 ## Feedback rating
 
-
+![alt text](https://i.ibb.co/QXhPv0J/Screenshot-2020-01-28-at-14-32-38.png)
 
 ```
 <TimelineMessage>
