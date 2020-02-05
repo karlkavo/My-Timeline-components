@@ -164,3 +164,12 @@ const postCodesMap = {
 msg.postCodesMap = postCodesMap;
 return msg;
 ```
+
+Split Name
+
+```
+const name = msg.payload.user.message.split(/ (.+)/);
+msg.payload.user.firstName = name[0];
+msg.payload.user.lastName = name[1] || "";
+return msg;
+```
