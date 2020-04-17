@@ -173,3 +173,12 @@ msg.payload.user.firstName = name[0];
 msg.payload.user.lastName = name[1] || "";
 return msg;
 ```
+
+Modifying payload using context
+
+```
+msg.payload.userId =  msg.payload.context.userId;
+msg.payload.user.name =  msg.payload.context.firstName;
+return msg;
+```
+
