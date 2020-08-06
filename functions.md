@@ -17,6 +17,19 @@ if(isValid) {
 return msg;
 ```
 
+validator
+
+```
+const transactionIdRegex = /\d{8}/;
+const txid = msg.payload.user.message.match(transactionIdRegex);
+
+if (txid){
+    msg.payload.user.TransactionId = txid[0];
+    return msg;
+}
+return [null,msg];
+```
+
 Random Number
 
 ```
