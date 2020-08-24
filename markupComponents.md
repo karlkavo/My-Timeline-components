@@ -186,4 +186,9 @@ return msg;
 </TimelineMessage>
 ```
 
+## Email Validation Switch node
+```
+[{"id":"8ab73853.f72828","type":"switch","z":"b257ae9f.4ae68","name":"email Validation","property":"payload.user.message","propertyType":"msg","rules":[{"t":"regex","v":"^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$","vt":"str","case":false},{"t":"else"}],"checkall":"true","repair":false,"outputs":2,"x":1260,"y":200,"wires":[["6c151797.dd7c78"],["8cec9b97.2b5958"]]}]
+```
+
 
